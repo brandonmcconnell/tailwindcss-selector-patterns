@@ -143,23 +143,23 @@ Here is the reformatted HTML table:
     </tr>
     <tr>
       <td><code>pattern-[%]</code></td>
-      <td><code>y:has(+ x), x + y</code></td>
+      <td><code>y:has(+ x),</code><br><code>x + y</code></td>
     </tr>
     <tr>
       <td><code>pattern-[%%]</code></td>
-      <td><code>y:has(~ x), x ~ y</code></td>
+      <td><code>y:has(~ x),</code><br><code>x ~ y</code></td>
     </tr>
     <tr>
       <td><code>pattern-[%3]</code></td>
-      <td><code>y:has(+ * + * + x), x + * + * + y</code></td>
+      <td><code>y:has(+ * + * + x),</code><br><code>x + * + * + y</code></td>
     </tr>
     <tr>
       <td><code>pattern-[%3<]</code></td>
-      <td><code>y:has(+ x, + * + x, + * + * + x), x + y, x + * + y, x + * + * + y</code></td>
+      <td><code>y:has(+ x, + * + x, + * + * + x),</code><br><code>x + y, x + * + y, x + * + * + y</code></td>
     </tr>
     <tr>
       <td><code>pattern-[%3>]</code></td>
-      <td><code>y:has(~ * + * + x), x + * + * ~ y</code></td>
+      <td><code>y:has(~ * + * + x),</code><br><code>x + * + * ~ y</code></td>
     </tr>
     <tr>
       <td><code>pattern-[>]</code></td>
@@ -203,23 +203,23 @@ Here is the reformatted HTML table:
     </tr>
     <tr>
       <td><code>pattern-[^]</code></td>
-      <td><code>y:has(> x), x > y</code></td>
+      <td><code>y:has(> x),</code><br><code>x > y</code></td>
     </tr>
     <tr>
       <td><code>pattern-[^^]</code></td>
-      <td><code>y:has(x), x y</code></td>
+      <td><code>y:has(x),</code><br><code>x y</code></td>
     </tr>
     <tr>
       <td><code>pattern-[^2]</code></td>
-      <td><code>y:has(> * > x), x > * > y</code></td>
+      <td><code>y:has(> * > x),</code><br><code>x > * > y</code></td>
     </tr>
     <tr>
       <td><code>pattern-[^2<]</code></td>
-      <td><code>y:has(> x, > * > x), x > y, x > * > y</code></td>
+      <td><code>y:has(> x, > * > x),</code><br><code>x > y, x > * > y</code></td>
     </tr>
     <tr>
       <td><code>pattern-[^2>]</code></td>
-      <td><code>y:has(* > x), x > * y</code></td>
+      <td><code>y:has(* > x),</code><br><code>x > * y</code></td>
     </tr>
   </tbody>
 </table>
