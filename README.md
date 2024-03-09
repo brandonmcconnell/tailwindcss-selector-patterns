@@ -223,3 +223,13 @@ Here is the reformatted HTML table:
     </tr>
   </tbody>
 </table>
+
+---
+
+I hope you find `tailwindcss-directional-shadows` a valuable addition to your projects. If you have any issues or suggestions, don't hesitate to open an issue or pull request.
+
+If you liked this, you might also like my other Tailwind CSS plugins:
+* [tailwindcss-multitool](https://github.com/brandonmcconnell/tailwindcss-multitool): Group utilities together by variant
+* [tailwindcss-jstool](https://github.com/brandonmcconnell/tailwindcss-jstool): Effortless build-time JS script injection
+* [tailwind-lerp-colors](https://github.com/brandonmcconnell/tailwind-lerp-colors): Expand your color horizons and take the fuss out of genertaing new—or expanding existing—color palettes
+* [tailwindcss-directional-shadows](https://github.com/brandonmcconnell/tailwindcss-directional-shadows): Supercharge your shadow utilities with added directional support (includes directional `shadow-border` utilities too ✨)
