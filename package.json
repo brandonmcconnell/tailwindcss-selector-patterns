@@ -1,0 +1,33 @@
+{
+  "name": "tailwindcss-selector-patterns",
+  "version": "0.0.0",
+  "description": "Selector Patterns for Tailwind CSS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brandonmcconnell/tailwindcss-selector-patterns.git"
+  },
+  "keywords": [
+    "tailwind",
+    "tailwindcss",
+    "css",
+    "pattern",
+    "postcss",
+    "matching",
+    "selector",
+    "selectors",
+    "style",
+    "styling",
+    "styles",
+    "has"
+  ],
+  "author": "Brandon McConnell",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/brandonmcconnell/tailwindcss-selector-patterns/issues"
+  },
+  "homepage": "https://github.com/brandonmcconnell/tailwindcss-selector-patterns#readme"
+}
