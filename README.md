@@ -85,7 +85,7 @@ pattern-[{combinator}{nth-index?}{inclusion-direction?}{;selector?}]
 
 ## Examples
 
-Here is the reformatted HTML table:
+Want to try it out for yourself? Take `tailwindcss-selector-patterns` for a spin [on Tailwind Play](https://play.tailwindcss.com/Yx80jD2QX5).
 
 <table>
   <thead>
@@ -220,7 +220,7 @@ Here is the reformatted HTML table:
 
 ---
 
-I hope you find `tailwindcss-directional-shadows` a valuable addition to your projects. If you have any issues or suggestions, don't hesitate to open an issue or pull request.
+I hope you find `tailwindcss-selector-patterns` a valuable addition to your projects. If you have any issues or suggestions, don't hesitate to open an issue or pull request.
 
 If you liked this, you might also like my other Tailwind CSS plugins:
 * [tailwindcss-multitool](https://github.com/brandonmcconnell/tailwindcss-multitool): Group utilities together by variant
