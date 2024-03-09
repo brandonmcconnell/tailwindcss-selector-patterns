@@ -1,6 +1,6 @@
 {
   "name": "tailwindcss-selector-patterns",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Selector Patterns for Tailwind CSS",
   "main": "index.js",
   "scripts": {
@@ -29,5 +29,9 @@
   "bugs": {
     "url": "https://github.com/brandonmcconnell/tailwindcss-selector-patterns/issues"
   },
-  "homepage": "https://github.com/brandonmcconnell/tailwindcss-selector-patterns#readme"
+  "homepage": "https://github.com/brandonmcconnell/tailwindcss-selector-patterns#readme",
+  "devDependencies": {
+    "@types/tailwindcss": "^3.1.0",
+    "tailwindcss": "^3.4.1"
+  }
 }
