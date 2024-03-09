@@ -11,6 +11,33 @@ Some advantages of using this plugin include:
 
 The majority of the magic behind this plugin lies in the [Tailwind CSS JIT engine](https://tailwindcss.com/blog/just-in-time-the-next-generation-of-tailwind-css), allowing for the dynamic processing of custom variants, and the the CSS [`:has()`](https://developer.mozilla.org/en-US/docs/Web/CSS/:has) selector, which can be used in many ways to target elements based on their relationship to the current element, even if the element you are targeting precedes the current element in the DOM tree. No run-time JS is needed.
 
+## Syntax
+
+```
+pattern-[{combinator}{nth-index?}{inclusion-direction?}{;selector?}]
+```
+
+- `combinator` (required): Specifies the relationship between the selected element and the target element(s). Available combinators are:
+  - `+`: Select the next sibling element
+  - `++`: Select all next sibling elements
+  - `-`: Select the previous sibling element
+  - `--`: Select all previous sibling elements
+  - `%`: Select the parent element
+  - `%%`: Select all ancestor elements
+  - `>`: Select direct child elements
+  - `>>`: Select all descendant elements
+  - `<`: Select direct parent element
+  - `<<`: Select all ancestor elements
+  - `^`: Select both parent and child elements
+  - `^^`: Select both ancestor and descendant elements
+- `nth-index` (optional): Specifies the index of the target element(s) relative to the selected element. It starts at 1 and defaults to 1 if omitted. Not valid if used with a "double combinator".
+- `inclusion-direction` (optional): Only valid if `nth-index` is specified. Determines the direction of including matching elements.
+  - `<`: Includes matching elements from the specified `nth-index` toward the element (inner/closer elements)
+  - `>`: Includes matching elements from the specified `nth-index` away from the element (outer/farther elements)
+- `selector` (optional): Specifies a selector to match against the target element(s). If not provided, any selector will match.
+  
+  ⚠️ Keep in mind that you cannot use any spaces characters in your utility, so if your selector requires a space, use an underscore `_` instead, (e.g. `pattern-[+3<;div_a]:underline`).
+
 ## Getting started
 
 ### Installation
@@ -55,33 +82,6 @@ module.exports = {
   </div>
 </div>
 ```
-
-## Syntax
-
-```
-pattern-[{combinator}{nth-index?}{inclusion-direction?}{;selector?}]
-```
-
-- `combinator` (required): Specifies the relationship between the selected element and the target element(s). Available combinators are:
-  - `+`: Select the next sibling element
-  - `++`: Select all next sibling elements
-  - `-`: Select the previous sibling element
-  - `--`: Select all previous sibling elements
-  - `%`: Select the parent element
-  - `%%`: Select all ancestor elements
-  - `>`: Select direct child elements
-  - `>>`: Select all descendant elements
-  - `<`: Select direct parent element
-  - `<<`: Select all ancestor elements
-  - `^`: Select both parent and child elements
-  - `^^`: Select both ancestor and descendant elements
-- `nth-index` (optional): Specifies the index of the target element(s) relative to the selected element. It starts at 1 and defaults to 1 if omitted. Not valid if used with a "double combinator".
-- `inclusion-direction` (optional): Only valid if `nth-index` is specified. Determines the direction of including matching elements.
-  - `<`: Includes matching elements from the specified `nth-index` toward the element (inner/closer elements)
-  - `>`: Includes matching elements from the specified `nth-index` away from the element (outer/farther elements)
-- `selector` (optional): Specifies a selector to match against the target element(s). If not provided, any selector will match.
-  
-  ⚠️ Keep in mind that you cannot use any spaces characters in your utility, so if your selector requires a space, use an underscore `_` instead, (e.g. `pattern-[+3<;div_a]:underline`).
 
 ## Examples
 
