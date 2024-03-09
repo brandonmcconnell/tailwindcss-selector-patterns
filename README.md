@@ -31,12 +31,6 @@ module.exports = {
     require('tailwindcss-selector-patterns'),
     // ...
   ],
-  variants: {
-    extend: {
-      // ...
-      pattern: ['responsive'],
-    },
-  },
 }
 ```
 
