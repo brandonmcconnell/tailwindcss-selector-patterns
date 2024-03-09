@@ -62,7 +62,7 @@ module.exports = {
 pattern-[{combinator}{nth-index?}{inclusion-direction?}{;selector?}]
 ```
 
-- `combinator`: Specifies the relationship between the selected element and the target element(s). Available combinators are:
+- `combinator` (required): Specifies the relationship between the selected element and the target element(s). Available combinators are:
   - `+`: Select the next sibling element
   - `++`: Select all next sibling elements
   - `-`: Select the previous sibling element
