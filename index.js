@@ -8,7 +8,7 @@ module.exports = plugin(({ matchVariant }) => {
     const optionalSelector = selector === "*" ? "" : selector;
     if (extraneous)
       throw new Error(
-        `Found more than 2 semicolon-delimited (;) arguments in Tailwind CSS selector pattern '${pattern_selector}'`
+        `Found more than 2 semicolon-delimited (;) arguments in Tailwind CSS selector pattern '${pattern_selector}'`,
       );
 
     const combinator = pattern[0];
@@ -16,14 +16,14 @@ module.exports = plugin(({ matchVariant }) => {
     if (!validCombinatorSymbols.includes(combinator))
       throw new Error(
         `Combinator used '${combinator}' in Tailwind CSS selector pattern '${pattern_selector}' is not one of the valid combinators: ${validCombinatorSymbols.join(
-          ", "
-        )}`
+          ", ",
+        )}`,
       );
 
     const isDoubleCombinator = pattern[1] === combinator;
     if (!isDoubleCombinator && validCombinatorSymbols.includes(pattern[1]))
       throw new Error(
-        `Second character in Tailwind CSS selector pattern '${pattern_selector}' ('${pattern[1]}') is a valid combinator but does not match the first combinator used ('${combinator}')`
+        `Second character in Tailwind CSS selector pattern '${pattern_selector}' ('${pattern[1]}') is a valid combinator but does not match the first combinator used ('${combinator}')`,
       );
 
     const nthIndex_dir = isDoubleCombinator
@@ -32,8 +32,8 @@ module.exports = plugin(({ matchVariant }) => {
     if (isDoubleCombinator && nthIndex_dir)
       throw new Error(
         `Double combinator '${combinator.repeat(
-          2
-        )}' in Tailwind CSS selector pattern '${pattern_selector}' can only be followed by an optional selector argument, delimited by a semicolon; instead found '${nthIndex_dir}'`
+          2,
+        )}' in Tailwind CSS selector pattern '${pattern_selector}' can only be followed by an optional selector argument, delimited by a semicolon; instead found '${nthIndex_dir}'`,
       );
 
     const validDirSymbols = ["<", ">"];
@@ -43,8 +43,8 @@ module.exports = plugin(({ matchVariant }) => {
       ? hasDir
         ? [nthIndex_dir.slice(0, -1), nthIndex_dir.slice(-1)]
         : nthIndex_dir
-        ? [nthIndex_dir]
-        : []
+          ? [nthIndex_dir]
+          : []
       : [];
 
     const nthIndex = Number(_nthIndex);
@@ -57,14 +57,14 @@ module.exports = plugin(({ matchVariant }) => {
     });
     if (!Number.isFinite(nthIndex))
       throw new Error(
-        `Invalid nth-index value '${_nthIndex}' in Tailwind CSS selector pattern '${pattern_selector}'`
+        `Invalid nth-index value '${_nthIndex}' in Tailwind CSS selector pattern '${pattern_selector}'`,
       );
     if (!(nthIndex > 0))
       throw new Error(
-        `nth-index value '${nthIndex}' in Tailwind CSS selector pattern '${pattern_selector}' must be greater than 0`
+        `nth-index value '${nthIndex}' in Tailwind CSS selector pattern '${pattern_selector}' must be greater than 0`,
       );
-    
-    let result = '';
+
+    let result = "";
 
     if (combinator === "+" || combinator === "%") {
       if (isDoubleCombinator) {
