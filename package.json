@@ -1,6 +1,6 @@
 {
   "name": "tailwindcss-selector-patterns",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Selector Patterns for Tailwind CSS",
   "main": "index.js",
   "scripts": {
