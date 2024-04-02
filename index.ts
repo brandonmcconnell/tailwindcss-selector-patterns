@@ -1,6 +1,6 @@
-const plugin = require("tailwindcss/plugin");
+import plugin from 'tailwindcss/plugin';
 
-module.exports = plugin(({ matchVariant }) => {
+export default plugin(({ matchVariant }) => {
   matchVariant("pattern", (pattern_selector) => {
     const [pattern, selector = "*", extraneous] = pattern_selector
       .split(";")
