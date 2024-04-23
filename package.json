@@ -1,6 +1,6 @@
 {
   "name": "tailwindcss-selector-patterns",
-  "version": "0.0.13",
+  "version": "0.0.14",
   "description": "Selector Patterns for Tailwind CSS",
   "type": "module",
   "source": "index.ts",
