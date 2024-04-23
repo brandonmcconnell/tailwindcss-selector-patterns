@@ -1,8 +1,9 @@
-import plugin from 'tailwindcss/plugin';
+import plugin from 'tailwindcss/plugin.js';
 
 export default plugin(({ matchVariant }) => {
   matchVariant('pattern', (pattern_selector) => {
     const [pattern, selector = '*', extraneous] = pattern_selector.split(';').map((str) => str.trim());
+    if (!pattern) throw new Error(`No pattern provided in Tailwind CSS selector pattern '${pattern_selector}'`);
     const optionalSelector = selector === '*' ? '' : selector;
     if (extraneous)
       throw new Error(
@@ -11,7 +12,7 @@ export default plugin(({ matchVariant }) => {
 
     const combinator = pattern[0];
     const validCombinatorSymbols = ['+', '-', '%', '>', '<', '^'];
-    if (!validCombinatorSymbols.includes(combinator))
+    if (!combinator || !validCombinatorSymbols.includes(combinator))
       throw new Error(
         `Combinator used '${combinator}' in Tailwind CSS selector pattern '${pattern_selector}' is not one of the valid combinators: ${validCombinatorSymbols.join(
           ', '
@@ -19,7 +20,7 @@ export default plugin(({ matchVariant }) => {
       );
 
     const isDoubleCombinator = pattern[1] === combinator;
-    if (!isDoubleCombinator && validCombinatorSymbols.includes(pattern[1]))
+    if (!isDoubleCombinator && validCombinatorSymbols.includes(pattern[1] as unknown as string))
       throw new Error(
         `Second character in Tailwind CSS selector pattern '${pattern_selector}' ('${pattern[1]}') is a valid combinator but does not match the first combinator used ('${combinator}')`
       );
